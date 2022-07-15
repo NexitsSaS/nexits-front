@@ -11,19 +11,19 @@ const dashboard = {
     title: 'Dashboard',
     type: 'group',
     children: [
-        // {
-        //     id: 'default',
-        //     title: 'Dashboard',
-        //     type: 'item',
-        //     url: '/dashboard/default',
-        //     icon: icons.IconDashboard,
-        //     breadcrumbs: false
-        // },
         {
             id: 'mainstats',
             title: 'Stats',
             type: 'item',
             url: '/dashboard/mainstats',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
+        },
+        {
+            id: 'catalog',
+            title: 'catalogue general',
+            type: 'item',
+            url: '/dashboard/catalog',
             icon: icons.IconDashboard,
             breadcrumbs: false
         }
