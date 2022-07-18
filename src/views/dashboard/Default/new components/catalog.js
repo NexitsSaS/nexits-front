@@ -82,7 +82,7 @@ export default function Catalog() {
                 transform: 'translateX(16px)',
                 color: '#fff',
                 '& + .MuiSwitch-track': {
-                    backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
+                    backgroundColor: theme.palette.mode === 'dark' ? '#0238e8' : '#0238e8',
                     opacity: 1,
                     border: 0
                 },
@@ -120,7 +120,7 @@ export default function Catalog() {
         <>
             <Grid container direction="row" sx={{p:3,ml:2,mb:2}}>
                 <SearchSection />
-                <Button variant="contained" sx={{borderRadius:"10px",ml:5}}>new catalog</Button>
+                <Button variant="contained" sx={{borderRadius:"10px",ml:5,backgroundColor:"#0238e8"}}>new catalog</Button>
             </Grid>
             <Grid container direction="row" spacing={1} sx={{ justifyContent: 'center' }}>
                 {data.map((item, i) => {

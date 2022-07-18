@@ -26,6 +26,14 @@ const dashboard = {
             url: '/dashboard/catalog',
             icon: icons.IconDashboard,
             breadcrumbs: false
+        },
+        {
+            id: 'packhist',
+            title: 'pack history',
+            type: 'item',
+            url: '/dashboard/packhistory',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
         }
     ]
 };
