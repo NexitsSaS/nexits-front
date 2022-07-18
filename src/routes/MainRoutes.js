@@ -15,6 +15,8 @@ const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')))
 // const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 // const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
 const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/mainstats')));
+const UtilsMainCatalog = Loadable(lazy(() => import('views/dashboard/Default/new-components/catalog')));
+const UtilsMainPackHist = Loadable(lazy(() => import('views/dashboard/Default/new-components/historypack')));
 // sample page routing
 // const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
@@ -32,33 +34,18 @@ const MainRoutes = {
             path: '/dashboard/default',
             element: <DashboardDefault />
         },
-        // {
-        //     path: '/utils/util-typography',
-        //     element: <UtilsTypography />
-        // },
-        // {
-        //     path: '/utils/util-color',
-        //     element: <UtilsColor />
-        // },
-        // {
-        //     path: '/utils/util-shadow',
-        //     element: <UtilsShadow />
-        // },
-        // {
-        //     path: '/icons/tabler-icons',
-        //     element: <UtilsTablerIcons />
-        // },
-        // {
-        //     path: '/icons/material-icons',
-        //     element: <UtilsMaterialIcons />
-        // },
-        // {
-        //     path: '/sample-page',
-        //     element: <SamplePage />
-        // },
+
         {
             path: '/dashboard/mainstats',
             element: <UtilsMainStats />
+        },
+        {
+            path: '/dashboard/catalog',
+            element: <UtilsMainCatalog />
+        },
+        {
+            path: '/dashboard/packhistory',
+            element: <UtilsMainPackHist />
         }
     ]
 };
