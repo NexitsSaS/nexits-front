@@ -14,7 +14,7 @@ const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')))
 // const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
 // const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 // const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
-const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new components/mainstats')));
+const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/mainstats')));
 // sample page routing
 // const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
@@ -26,7 +26,7 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <UtilsMainStats/>
+            element: <UtilsMainStats />
         },
         {
             path: '/dashboard/default',
