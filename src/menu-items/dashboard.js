@@ -43,6 +43,14 @@ const dashboard = {
             icon: icons.GroupsIcon,
             breadcrumbs: false
         }
+        // {
+        //     id: 'teams',
+        //     title: 'teams',
+        //     type: 'item',
+        //     url: '/dashboard/teams',
+        //     icon: icons.IconDashboard,
+        //     breadcrumbs: false
+        // }
     ]
 };
 

@@ -1,7 +1,20 @@
 import { useEffect, useState } from 'react';
 
 // material-ui
-import { Button, Grid, Paper, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow } from '@mui/material';
+import {
+    Button,
+    Grid,
+    MenuItem,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    tableCellClasses,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Toolbar
+} from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
@@ -22,6 +35,7 @@ import styled from '@emotion/styled';
 import { useStyle } from 'hooks/useStyle';
 import classNames from 'classnames';
 import { Box } from '@mui/system';
+import { Input } from './useTable';
 
 // ==============================|| DEFAULT TeamDashboard ||============================== //
 
@@ -61,6 +75,18 @@ const TeamsRows = [
     createTeam('Fatma Ben Mbarek', 1, '2%', 'canceled')
 ];
 const TeamDashboard = () => {
+    const handleSelectChange = (e) => {
+        setTeam(e.target.value);
+    };
+    const handleSearch = (e) => {
+        let target = e.target;
+        setFilterFn({
+            fn: (items) => {
+                if (target.value === '') return items;
+                else return items.filter((x) => x.user.toLowerCase().includes(target.value));
+            }
+        });
+    };
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
         setLoading(false);
@@ -114,8 +140,18 @@ const TeamDashboard = () => {
                             </Box>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} md={'100%'} mt={'2rem'}>
+                    <Grid item xs={4} md={'100%'} mt={'2rem'}>
                         <TitleAndText title="All teams" relatedInfo="200 Member" />
+                    </Grid>
+                    <Grid item xs={8} md={'100%'} mt={'2rem'}>
+                        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', paddingTop: '0' }}>
+                            <Input sx={{ width: '50%' }} onChange={handleSearch} label="search order" />
+                            <Input onChange={handleSelectChange} select value="all">
+                                <MenuItem value="all">All</MenuItem>
+                                <MenuItem value="Web Dev Mobile">Web Dev Mobile</MenuItem>
+                                <MenuItem value="UX/UI">UX/UI</MenuItem>
+                            </Input>
+                        </Toolbar>
                     </Grid>
                     <Grid item xs={12} md={'100%'} mt={'2rem'} className={classes.borderTable}>
                         {/* table content for multiple team views */}
