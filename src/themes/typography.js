@@ -4,7 +4,6 @@
  */
 
 export default function themeTypography(theme) {
-    console.log(theme.colors.darkPrimaryDark);
     return {
         fontFamily: theme?.customization?.fontFamily,
         h6: {

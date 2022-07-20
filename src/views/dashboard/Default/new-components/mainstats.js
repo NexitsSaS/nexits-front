@@ -6,7 +6,7 @@ import { Grid } from '@mui/material';
 // project imports
 // import EarningCard from './EarningCard';
 // import PopularCard from './PopularCard';
-import Newboxcharts from './Newboxcharts';
+import Newboxcharts from './NewBoxCharts';
 // import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 // import TotalIncomeLightCard from './TotalIncomeLightCard';
 import TotalGrowthBarChart from '../TotalGrowthBarChart';

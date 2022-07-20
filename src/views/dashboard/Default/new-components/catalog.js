@@ -9,6 +9,7 @@ import Switch from '@mui/material/Switch';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import TitleAndText from './TitleAndText';
 
 export default function Catalog() {
     const data = [
@@ -118,9 +119,14 @@ export default function Catalog() {
 
     return (
         <>
-            <Grid container direction="row" sx={{p:3,ml:2,mb:2}}>
+            <Grid container direction="row" sx={{ p: 3, ml: 2, mb: 2 }}>
+                <Typography variant="h1">{'Catalogue'}</Typography>
+            </Grid>
+            <Grid container direction="row" sx={{ p: 3, ml: 2, mb: 2 }}>
                 <SearchSection />
-                <Button variant="contained" sx={{borderRadius:"10px",ml:5,backgroundColor:"#0238e8"}}>new catalog</Button>
+                <Button variant="contained" sx={{ borderRadius: '10px', ml: 5, backgroundColor: '#0238e8' }}>
+                    new catalog
+                </Button>
             </Grid>
             <Grid container direction="row" spacing={1} sx={{ justifyContent: 'center' }}>
                 {data.map((item, i) => {
@@ -132,7 +138,7 @@ export default function Catalog() {
                                 </IconButton>
                             </Grid>
 
-                            <CardMedia component="img" sx={{maxHeight:300,cursor:"pointer"}} image={item.url} alt="" />
+                            <CardMedia component="img" sx={{ maxHeight: 300, cursor: 'pointer' }} image={item.url} alt="" />
                             <CardContent>
                                 <Typography variant="body2" color="text.secondary">
                                     This impressive paella is a perfect party dish and a fun meal to cook together with your guests
@@ -153,3 +159,4 @@ export default function Catalog() {
         </>
     );
 }
+

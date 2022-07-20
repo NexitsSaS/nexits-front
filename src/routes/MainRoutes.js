@@ -6,7 +6,7 @@ import Loadable from 'ui-component/Loadable';
 import Lazy from 'yup/lib/Lazy';
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
+// const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
 // utilities routing
 // const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -17,7 +17,8 @@ const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')))
 const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/mainstats')));
 const UtilsMainCatalog = Loadable(lazy(() => import('views/dashboard/Default/new-components/catalog')));
 const UtilsMainPackHist = Loadable(lazy(() => import('views/dashboard/Default/new-components/historypack')));
-// sample page routing
+const TeamStatsUtilsMain = Loadable(lazy(() => import('views/dashboard/Default/new-components/TeamDashboard')));
+const UtilsTeams = Loadable(lazy(() => import('views/dashboard/Default/new-components/Team')));
 // const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
 // ==============================|| MAIN ROUTING ||============================== //
@@ -31,22 +32,25 @@ const MainRoutes = {
             element: <UtilsMainStats />
         },
         {
-            path: '/dashboard/default',
-            element: <DashboardDefault />
+            path: '/teams',
+            element: <TeamStatsUtilsMain />
         },
-
         {
-            path: '/dashboard/mainstats',
+            path: '/dashboard/stats',
             element: <UtilsMainStats />
         },
         {
-            path: '/dashboard/catalog',
+            path: '/catalog',
             element: <UtilsMainCatalog />
         },
         {
-            path: '/dashboard/packhistory',
+            path: '/packhistory',
             element: <UtilsMainPackHist />
         }
+        // {
+        //     path: '/dashboard/teams',
+        //     element: <UtilsTeams />
+        // }
     ]
 };
 
