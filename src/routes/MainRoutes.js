@@ -14,9 +14,10 @@ const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')))
 // const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
 // const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 // const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
-const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/mainstats')));
-const UtilsMainCatalog = Loadable(lazy(() => import('views/dashboard/Default/new-components/catalog')));
-const UtilsMainPackHist = Loadable(lazy(() => import('views/dashboard/Default/new-components/historypack')));
+const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/MainStats')));
+const UtilsMainCatalog = Loadable(lazy(() => import('views/dashboard/Default/new-components/Catalog')));
+const UtilsMainPackHist=Loadable(lazy(()=>import('views/dashboard/Default/new-components/HistoryPack')))
+const UtilsMainProductDetails=Loadable(lazy(()=>import('views/dashboard/Default/new-components/ProductDetails')))
 // sample page routing
 // const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
@@ -45,7 +46,11 @@ const MainRoutes = {
         },
         {
             path: '/dashboard/packhistory',
-            element: <UtilsMainPackHist />
+            element: <UtilsMainPackHist/>
+        },
+        {
+            path: '/dashboard/product/:id',
+            element: <UtilsMainProductDetails/>
         }
     ]
 };

@@ -10,7 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Grid, Typography } from '@mui/material';
-import ArrowCircleDown from '@mui/icons-material/ArrowCircleDown';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import { useNavigate } from 'react-router-dom';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -51,7 +51,7 @@ export default function Historypack() {
         <>
             <Grid container direction="row" sx={{ p: 5, justifyContent: 'space-around', alignItems: 'center' }}>
                 <Grid sx={{ p: 2 }}>
-                    <ArrowCircleDown
+                    <ArrowCircleLeftIcon
                         onClick={() => {
                             history('/dashboard/mainstats');
                         }}
