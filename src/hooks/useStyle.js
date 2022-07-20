@@ -56,5 +56,23 @@ export const useStyle = makeStyles(() => ({
     removeRowColors: {
         backgroundColor: 'unset',
         color: '#616161'
+    },
+    border: {
+        border: '2px solid grey'
+    },
+    addTeamButton: {
+        fontWeight: 'bold',
+        marginTop: '56px',
+        color: '#c7c7c7',
+        fontSize: '25px',
+        marginLeft: '-20px',
+        '& .css-gcc2o7-MuiButton-startIcon': {
+            position: 'relative',
+            top: '-35px',
+            left: '90px'
+        },
+        '& .css-gcc2o7-MuiButton-startIcon>*:nth-of-type(1)': {
+            fontSize: '40px'
+        }
     }
 }));

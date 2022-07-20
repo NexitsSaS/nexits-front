@@ -5,6 +5,7 @@ import { Button, Grid, Paper, Table, TableBody, TableCell, tableCellClasses, Tab
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 // project imports
 // import EarningCard from './EarningCard';
 // import PopularCard from './PopularCard';
@@ -20,6 +21,7 @@ import TeamCardPreview from './TeamCardPreview';
 import styled from '@emotion/styled';
 import { useStyle } from 'hooks/useStyle';
 import classNames from 'classnames';
+import { Box } from '@mui/system';
 
 // ==============================|| DEFAULT TeamDashboard ||============================== //
 
@@ -95,6 +97,22 @@ const TeamDashboard = () => {
                                 <TeamCardPreview team={`${team.members} members`} name={team.name} />
                             </Grid>
                         ))}
+                        <Grid item xs={4} md={'100%'}>
+                            <Box
+                                sx={{
+                                    border: '1px solid #B8B8B8',
+                                    borderRadius: '12px',
+                                    margin: '0 auto',
+                                    height: '134px',
+                                    width: '388px',
+                                    textAlign: 'center'
+                                }}
+                            >
+                                <Button variant="text" startIcon={<AddToPhotosIcon />} className={classes.addTeamButton}>
+                                    Add a Team
+                                </Button>
+                            </Box>
+                        </Grid>
                     </Grid>
                     <Grid item xs={12} md={'100%'} mt={'2rem'}>
                         <TitleAndText title="All teams" relatedInfo="200 Member" />
