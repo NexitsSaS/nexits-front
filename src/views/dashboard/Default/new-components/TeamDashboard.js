@@ -14,12 +14,20 @@ import { gridSpacing } from 'store/constant';
 import TitleAndText from './TitleAndText';
 import OrderMiniLeftCard from './OrderMiniLeftCard';
 import TopBuyCard from './TopBuyCard';
+import TeamCardPreview from './TeamCardPreview';
 // ==============================|| DEFAULT TeamDashboard ||============================== //
+function createData(name, members) {
+    return { name, members };
+}
 
+const teams = [
+    createData('Web development Mobil', 100),
+    createData('Création logiciels', 255),
+    createData('UI/UX Design', 6),
+    createData('Référencement SEO / SMO', 126),
+    createData('Développement Web Mobile', 13)
+];
 const TeamDashboard = () => {
-    console.log('====================================');
-    console.log('reading this');
-    console.log('====================================');
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
         setLoading(false);
@@ -44,17 +52,22 @@ const TeamDashboard = () => {
                     </Grid>
                 </Grid>
                 <Grid container spacing={gridSpacing}>
-                    <Grid item xs={12} md={'100%'}>
+                    <Grid item xs={12} md={'100%'} mt={'2rem'}>
                         <TitleAndText title="Teams Category" relatedInfo="this part is mainly the dashboard for the teams" />
                     </Grid>
-                    <Grid item xs={12} md={'100%'}>
+                    <Grid container xs={12} md={'100%'} mt={'2rem'} spacing={2} ml={0}>
                         {/* <TotalGrowthBarChart isLoading={isLoading} /> */}
                         {/* team main cards */}
+                        {teams.map((team) => (
+                            <Grid item xs={4} md={'100%'}>
+                                <TeamCardPreview team={`${team.members} members`} name={team.name} />
+                            </Grid>
+                        ))}
                     </Grid>
-                    <Grid item xs={12} md={'100%'}>
+                    <Grid item xs={12} md={'100%'} mt={'2rem'}>
                         <TitleAndText title="All teams" relatedInfo="200 Member" />
                     </Grid>
-                    <Grid item xs={12} md={'100%'}>
+                    <Grid item xs={12} md={'100%'} mt={'2rem'}>
                         {/* table content for multiple team views */}
                     </Grid>
                 </Grid>
