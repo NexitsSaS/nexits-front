@@ -20,6 +20,7 @@
         "@testing-library/user-event": "^12.8.3",
         "airbnb": "^0.0.2",
         "apexcharts": "^3.35.3",
+        "classname": "^0.0.0",
         "clsx": "^1.1.1",
         "formik": "^2.2.6",
         "framer-motion": "^4.1.13",

@@ -23,7 +23,7 @@ export default function themeTypography(theme) {
         },
         h3: {
             fontSize: '1.25rem',
-            color: theme.heading,
+            color: theme.colors.darkPrimaryDark,
             fontWeight: 600
         },
         h2: {
