@@ -26,8 +26,8 @@ export const useStyle = makeStyles(() => ({
         color: 'white'
     },
     buttonStatus: {
-        borderRadius: '20px',
-        width: '40%'
+        borderRadius: '25px',
+        width: '50%'
     },
     completed: {
         color: '#1c3aff',
@@ -40,5 +40,21 @@ export const useStyle = makeStyles(() => ({
     canceled: {
         color: '#dfe5ff',
         backgroundColor: '#001283'
+    },
+    borderTable: {
+        border: '2px solid grey',
+        borderRadius: '20px',
+        marginLeft: '25px',
+        padding: '0 !important'
+    },
+    tableCentered: {
+        '& .css-18dtc19-MuiTable-root': {
+            width: '95%',
+            margin: '25px auto 0'
+        }
+    },
+    removeRowColors: {
+        backgroundColor: 'unset',
+        color: '#616161'
     }
 }));

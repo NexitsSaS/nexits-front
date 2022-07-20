@@ -19,24 +19,18 @@ import TopBuyCard from './TopBuyCard';
 import TeamCardPreview from './TeamCardPreview';
 import styled from '@emotion/styled';
 import { useStyle } from 'hooks/useStyle';
+import classNames from 'classnames';
 
 // ==============================|| DEFAULT TeamDashboard ||============================== //
 
 //---------- Styled Componenet --------------//
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-        backgroundColor: '#cfcfcf',
-        color: theme.palette.common.white
-    },
     [`&.${tableCellClasses.body}`]: {
         fontSize: 14
     }
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-        backgroundColor: theme.palette.action.hover
-    },
     // hide last border
     '&:last-child td, &:last-child th': {
         border: 0
@@ -58,11 +52,11 @@ function createTeam(user, order, budget, orderStatus) {
 }
 
 const TeamsRows = [
-    createTeam('Mohamed Fellah', 55, '25/07/2022', 'completed'),
-    createTeam('Mounir Atia', 2, '25/07/2022', 'pending'),
-    createTeam('Salma Manaii', 22, '25/07/2022', 'pending'),
-    createTeam('Bechi Ben Mahmoud', 5, '25/07/2022', 'canceled'),
-    createTeam('Fatma Ben Mbarek', 1, '25/07/2022', 'canceled')
+    createTeam('Mohamed Fellah', 55, '22%', 'completed'),
+    createTeam('Mounir Atia', 2, '66%', 'pending'),
+    createTeam('Salma Manaii', 22, '25%', 'pending'),
+    createTeam('Bechi Ben Mahmoud', 5, '90%', 'canceled'),
+    createTeam('Fatma Ben Mbarek', 1, '2%', 'canceled')
 ];
 const TeamDashboard = () => {
     const [isLoading, setLoading] = useState(true);
@@ -105,9 +99,9 @@ const TeamDashboard = () => {
                     <Grid item xs={12} md={'100%'} mt={'2rem'}>
                         <TitleAndText title="All teams" relatedInfo="200 Member" />
                     </Grid>
-                    <Grid item xs={12} md={'100%'} mt={'2rem'}>
+                    <Grid item xs={12} md={'100%'} mt={'2rem'} className={classes.borderTable}>
                         {/* table content for multiple team views */}
-                        <TableContainer component={Paper} sx={{ mt: 7 }}>
+                        <TableContainer component={Paper} className={classNames(classes.tableCentered, classes.removeRowColors)}>
                             <Table sx={{ minWidth: 700 }} aria-label="customized table">
                                 <TableHead>
                                     <TableRow>
@@ -123,13 +117,14 @@ const TeamDashboard = () => {
                                                 head == 'orderStatus' ? (
                                                     <StyledTableCell align="center">
                                                         <Button
-                                                            className={
-                                                                row[head] == 'pending'
+                                                            className={classNames(
+                                                                classes.buttonStatus,
+                                                                classes.buttonStatus && row[head] == 'pending'
                                                                     ? classes.pending
                                                                     : row[head] == 'completed'
                                                                     ? classes.completed
                                                                     : classes.canceled
-                                                            }
+                                                            )}
                                                             variant="contained"
                                                             startIcon={
                                                                 row[head] == 'pending' ? (
