@@ -34,9 +34,16 @@ const dashboard = {
             url: '/dashboard/packhistory',
             icon: icons.IconDashboard,
             breadcrumbs: false
+        },
+        {
+            id: 'teams',
+            title: 'teams',
+            type: 'item',
+            url: '/dashboard/teams',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
         }
     ]
 };
 
 export default dashboard;
-
