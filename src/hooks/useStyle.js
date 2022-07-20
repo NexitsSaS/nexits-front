@@ -1,4 +1,5 @@
 import makeStyles from '@mui/styles/makeStyles';
+
 export const useStyle = makeStyles(() => ({
     barThickness: {
         '& .css-snzakf-MuiLinearProgress-root': {

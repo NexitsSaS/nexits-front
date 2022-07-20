@@ -10,7 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Grid, Typography } from '@mui/material';
-import ArrowCircleDown from '@mui/icons-material/ArrowCircleDown';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import { useNavigate } from 'react-router-dom';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -45,13 +45,17 @@ const rows = [
     createData('a user', 'test@mail.test', 'france', 5, 1, 'santori', '25/07/2022')
 ];
 
-export default function Historypack() {
+export default function Historypack({ table = rows }) {
     const history = useNavigate();
+    const headerTable = Object.keys(table[0]);
     return (
         <>
+            <Grid container direction="row" sx={{ p: 3, ml: 2, mb: 2 }}>
+                <Typography variant="h1">{'History'}</Typography>
+            </Grid>
             <Grid container direction="row" sx={{ p: 5, justifyContent: 'space-around', alignItems: 'center' }}>
                 <Grid sx={{ p: 2 }}>
-                    <ArrowCircleDown
+                    <ArrowCircleLeftIcon
                         onClick={() => {
                             history('/dashboard/mainstats');
                         }}
@@ -73,25 +77,17 @@ export default function Historypack() {
                 <Table sx={{ minWidth: 700 }} aria-label="customized table">
                     <TableHead>
                         <TableRow>
-                            <StyledTableCell align="center">user</StyledTableCell>
-                            <StyledTableCell align="center">email</StyledTableCell>
-                            <StyledTableCell align="center">office</StyledTableCell>
-                            <StyledTableCell align="center">product</StyledTableCell>
-                            <StyledTableCell align="center">pack</StyledTableCell>
-                            <StyledTableCell align="center">admin</StyledTableCell>
-                            <StyledTableCell align="center">date</StyledTableCell>
+                            {headerTable.map((head) => (
+                                <StyledTableCell align="center">{head}</StyledTableCell>
+                            ))}
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
+                        {rows.map((row, i) => (
                             <StyledTableRow key={row.name}>
-                                <StyledTableCell align="center">{row.user}</StyledTableCell>
-                                <StyledTableCell align="center">{row.email}</StyledTableCell>
-                                <StyledTableCell align="center">{row.office}</StyledTableCell>
-                                <StyledTableCell align="center">{row.product}</StyledTableCell>
-                                <StyledTableCell align="center">{row.packs}</StyledTableCell>
-                                <StyledTableCell align="center">{row.admin}</StyledTableCell>
-                                <StyledTableCell align="center">{row.date}</StyledTableCell>
+                                {headerTable.map((head) => (
+                                    <StyledTableCell align="center">{row[head]}</StyledTableCell>
+                                ))}
                             </StyledTableRow>
                         ))}
                     </TableBody>

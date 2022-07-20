@@ -14,9 +14,12 @@ import { gridSpacing } from 'store/constant';
 import TitleAndText from './TitleAndText';
 import OrderMiniLeftCard from './OrderMiniLeftCard';
 import TopBuyCard from './TopBuyCard';
-// ==============================|| DEFAULT MainStats ||============================== //
+// ==============================|| DEFAULT TeamDashboard ||============================== //
 
-const MainStats = () => {
+const TeamDashboard = () => {
+    console.log('====================================');
+    console.log('reading this');
+    console.log('====================================');
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
         setLoading(false);
@@ -42,7 +45,17 @@ const MainStats = () => {
                 </Grid>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={12} md={'100%'}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
+                        <TitleAndText title="Teams Category" relatedInfo="this part is mainly the dashboard for the teams" />
+                    </Grid>
+                    <Grid item xs={12} md={'100%'}>
+                        {/* <TotalGrowthBarChart isLoading={isLoading} /> */}
+                        {/* team main cards */}
+                    </Grid>
+                    <Grid item xs={12} md={'100%'}>
+                        <TitleAndText title="All teams" relatedInfo="200 Member" />
+                    </Grid>
+                    <Grid item xs={12} md={'100%'}>
+                        {/* table content for multiple team views */}
                     </Grid>
                 </Grid>
             </Grid>
@@ -74,4 +87,4 @@ const MainStats = () => {
     );
 };
 
-export default MainStats;
+export default TeamDashboard;
