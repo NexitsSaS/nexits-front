@@ -24,5 +24,21 @@ export const useStyle = makeStyles(() => ({
         backgroundColor: '#1565c0',
         padding: '0.45rem',
         color: 'white'
+    },
+    buttonStatus: {
+        borderRadius: '20px',
+        width: '40%'
+    },
+    completed: {
+        color: '#1c3aff',
+        backgroundColor: '#dfe5ff'
+    },
+    pending: {
+        color: '#dfe5ff',
+        backgroundColor: '#1c3aff'
+    },
+    canceled: {
+        color: '#dfe5ff',
+        backgroundColor: '#001283'
     }
 }));

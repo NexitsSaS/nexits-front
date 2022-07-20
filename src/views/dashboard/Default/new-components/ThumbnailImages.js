@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material';
 import { useStyle } from 'hooks/useStyle';
-import { ImagesProvider, URLEditor, ThumbnailOptionsProvider, Thumbnails } from 'react-thumbnails';
 const StackedImages = ({
     thumbnailProfiles = [
         'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=634&q=80',

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 
 // material-ui
-import { Grid } from '@mui/material';
-
+import { Button, Grid, Paper, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow } from '@mui/material';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import CheckIcon from '@mui/icons-material/Check';
+import CloseIcon from '@mui/icons-material/Close';
 // project imports
 // import EarningCard from './EarningCard';
 // import PopularCard from './PopularCard';
@@ -15,11 +17,35 @@ import TitleAndText from './TitleAndText';
 import OrderMiniLeftCard from './OrderMiniLeftCard';
 import TopBuyCard from './TopBuyCard';
 import TeamCardPreview from './TeamCardPreview';
+import styled from '@emotion/styled';
+import { useStyle } from 'hooks/useStyle';
+
 // ==============================|| DEFAULT TeamDashboard ||============================== //
+
+//---------- Styled Componenet --------------//
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+        backgroundColor: '#cfcfcf',
+        color: theme.palette.common.white
+    },
+    [`&.${tableCellClasses.body}`]: {
+        fontSize: 14
+    }
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+        border: 0
+    }
+}));
+//-------------Data construction ------------//
 function createData(name, members) {
     return { name, members };
 }
-
 const teams = [
     createData('Web development Mobil', 100),
     createData('Création logiciels', 255),
@@ -27,12 +53,24 @@ const teams = [
     createData('Référencement SEO / SMO', 126),
     createData('Développement Web Mobile', 13)
 ];
+function createTeam(user, order, budget, orderStatus) {
+    return { user, order, budget, orderStatus };
+}
+
+const TeamsRows = [
+    createTeam('Mohamed Fellah', 55, '25/07/2022', 'completed'),
+    createTeam('Mounir Atia', 2, '25/07/2022', 'pending'),
+    createTeam('Salma Manaii', 22, '25/07/2022', 'pending'),
+    createTeam('Bechi Ben Mahmoud', 5, '25/07/2022', 'canceled'),
+    createTeam('Fatma Ben Mbarek', 1, '25/07/2022', 'canceled')
+];
 const TeamDashboard = () => {
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
         setLoading(false);
     }, []);
-
+    const headerTableTeam = Object.keys(TeamsRows[0]);
+    const classes = useStyle();
     return (
         <Grid container spacing={gridSpacing}>
             {/* {middle/main side } */}
@@ -69,6 +107,52 @@ const TeamDashboard = () => {
                     </Grid>
                     <Grid item xs={12} md={'100%'} mt={'2rem'}>
                         {/* table content for multiple team views */}
+                        <TableContainer component={Paper} sx={{ mt: 7 }}>
+                            <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                                <TableHead>
+                                    <TableRow>
+                                        {headerTableTeam.map((head) => (
+                                            <StyledTableCell align="center">{head}</StyledTableCell>
+                                        ))}
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {TeamsRows.map((row, i) => (
+                                        <StyledTableRow key={row.name}>
+                                            {headerTableTeam.map((head) =>
+                                                head == 'orderStatus' ? (
+                                                    <StyledTableCell align="center">
+                                                        <Button
+                                                            className={
+                                                                row[head] == 'pending'
+                                                                    ? classes.pending
+                                                                    : row[head] == 'completed'
+                                                                    ? classes.completed
+                                                                    : classes.canceled
+                                                            }
+                                                            variant="contained"
+                                                            startIcon={
+                                                                row[head] == 'pending' ? (
+                                                                    <AccessTimeIcon />
+                                                                ) : row[head] == 'completed' ? (
+                                                                    <CheckIcon />
+                                                                ) : (
+                                                                    <CloseIcon />
+                                                                )
+                                                            }
+                                                        >
+                                                            {row[head]}
+                                                        </Button>
+                                                    </StyledTableCell>
+                                                ) : (
+                                                    <StyledTableCell align="center">{row[head]}</StyledTableCell>
+                                                )
+                                            )}
+                                        </StyledTableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
                     </Grid>
                 </Grid>
             </Grid>
