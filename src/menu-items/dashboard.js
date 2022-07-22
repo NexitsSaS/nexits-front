@@ -1,8 +1,9 @@
 // assets
 import { IconDashboard, IconClipboardCheck, IconClipboardList } from '@tabler/icons';
 import GroupsIcon from '@mui/icons-material/Groups';
+import CategoryIcon from '@mui/icons-material/Category';
 // constant
-const icons = { IconDashboard, IconClipboardCheck, IconClipboardList, GroupsIcon };
+const icons = { IconDashboard, IconClipboardCheck, IconClipboardList, GroupsIcon, CategoryIcon };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -42,15 +43,15 @@ const dashboard = {
             url: '/teams',
             icon: icons.GroupsIcon,
             breadcrumbs: false
+        },
+        {
+            id: 'Assets',
+            title: 'assets',
+            type: 'item',
+            url: '/dashboard/assets',
+            icon: icons.CategoryIcon,
+            breadcrumbs: false
         }
-        // {
-        //     id: 'teams',
-        //     title: 'teams',
-        //     type: 'item',
-        //     url: '/dashboard/teams',
-        //     icon: icons.IconDashboard,
-        //     breadcrumbs: false
-        // }
     ]
 };
 
