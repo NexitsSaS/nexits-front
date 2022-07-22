@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import BasicModal from './ModalAssets';
 
 export default function FadeMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,7 +25,7 @@ export default function FadeMenu() {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                Dashboard
+                <MoreHorizIcon />
             </Button>
             <Menu
                 id="fade-menu"
@@ -35,7 +37,11 @@ export default function FadeMenu() {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
+                <MenuItem>
+                    <BasicModal name={'Detail'} />
+                </MenuItem>
                 <MenuItem onClick={handleClose}>Edit</MenuItem>
+                <MenuItem onClick={handleClose}>Delete</MenuItem>
             </Menu>
         </div>
     );

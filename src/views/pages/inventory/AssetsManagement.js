@@ -2,7 +2,7 @@ import useTable, { Input } from 'ui-component/table/useTable';
 import { TableBody, TableCell, TableRow, Toolbar, MenuItem, CardHeader } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import FadeMenu from './OptionMenu';
 
 const headCells = [
     {
@@ -34,6 +34,11 @@ const headCells = [
         label: 'Action'
     }
 ];
+const typeColors = {
+    buy: '#07cd00',
+    rent: '#d1a700',
+    leasing: '#001acd'
+};
 
 const AssetsManagement = () => {
     const [data, setData] = useState([]);
@@ -56,7 +61,7 @@ const AssetsManagement = () => {
         setFilterFn({
             fn: (items) => {
                 if (target.value === '') return items;
-                else return items.filter((x) => x.user.toLowerCase().includes(target.value));
+                else return items.filter((x) => x.productName.toLowerCase().includes(target.value));
             }
         });
     };
@@ -68,12 +73,12 @@ const AssetsManagement = () => {
         <div>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1>User Assets Management</h1>
-                <Input sx={{ width: '50%' }} onChange={handleSearch} label="search order" />
-                <Input onChange={handleSelectChange} select value="all">
+                <Input sx={{ width: '50%' }} onChange={handleSearch} label="search product" />
+                {/* <Input onChange={handleSelectChange} select value="all">
                     <MenuItem value="all">All</MenuItem>
                     <MenuItem value="Web Dev Mobile">Web Dev Mobile</MenuItem>
                     <MenuItem value="UX/UI">UX/UI</MenuItem>
-                </Input>
+                </Input> */}
             </Toolbar>
             <Box sx={{ border: '2px solid #CECECE', borderRadius: '16px', padding: '5px 25px' }}>
                 <TableContainer>
@@ -93,11 +98,15 @@ const AssetsManagement = () => {
                                                     color: 'blue'
                                                 }}
                                             >
-                                                <MoreHorizIcon />
+                                                <FadeMenu />
                                             </Box>
                                         </TableCell>
                                     ) : (
-                                        <TableCell>
+                                        <TableCell
+                                            sx={{
+                                                color: headerCell.id === 'type' ? typeColors[order[headerCell.id]] : 'none'
+                                            }}
+                                        >
                                             {headerCell.id == 'productName' ? (
                                                 <CardHeader
                                                     avatar={<img src={order.imageThumbnail} alt={headerCell.id} loading="lazy" />}
