@@ -11,7 +11,7 @@ import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 import TotalIncomeLightCard from './TotalIncomeLightCard';
 import TotalGrowthBarChart from './TotalGrowthBarChart';
 import { gridSpacing } from 'store/constant';
-import MainStats from './new-components/mainstats';
+import MainStats from './new-components/MainStats';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 

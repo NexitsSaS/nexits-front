@@ -19,6 +19,8 @@ const UtilsMainCatalog = Loadable(lazy(() => import('views/dashboard/Default/new
 const UtilsMainPackHist = Loadable(lazy(() => import('views/dashboard/Default/new-components/historypack')));
 const TeamStatsUtilsMain = Loadable(lazy(() => import('views/dashboard/Default/new-components/TeamDashboard')));
 const UtilsTeams = Loadable(lazy(() => import('views/dashboard/Default/new-components/Team')));
+const UtilsMainProductDetails = Loadable(lazy(() => import('views/dashboard/Default/new-components/ProductDetails')));
+
 // const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
 // ==============================|| MAIN ROUTING ||============================== //
@@ -46,7 +48,12 @@ const MainRoutes = {
         {
             path: '/packhistory',
             element: <UtilsMainPackHist />
+        },
+        {
+            path: '/dashboard/product/:id',
+            element: <UtilsMainProductDetails />
         }
+
         // {
         //     path: '/dashboard/teams',
         //     element: <UtilsTeams />
