@@ -117,6 +117,7 @@ const useTable = (records, headCells, filterFn) => {
     };
     const TblPagination = () => (
         <TablePagination
+            next
             page={page}
             component="div"
             rowsPerPageOptions={pages}
