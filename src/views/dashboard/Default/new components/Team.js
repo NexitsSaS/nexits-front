@@ -34,7 +34,7 @@ const Team = () => {
     const [data, setData] = useState([]);
     const [filterFn, setFilterFn] = useState({
         fn: (items) => {
-            return items;
+            return item
         }
     });
     useEffect(() => {
