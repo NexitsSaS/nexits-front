@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AvatarImg from './user.jpg';
+import ActionMenu from './ActionMenu';
+import { Link } from 'react-router-dom';
 
 const headCells = [
     {
@@ -91,7 +93,9 @@ const AllUsersPage = () => {
                 </p>
                 <Box sx={{ display: 'flex', alignItems:'baseline'}}>
                     <SearchInput onChange={handleSearch} />
+                    <Link to='/dashboard/uses/adduser'>
                     <Button sx={{ marginLeft:'24px', backgroundColor: '#0800ff', fontSize:'16px', padding:'8px 48px 8px 48px', height:'46px', borderRadius:'8px' }} variant='contained'>Add new user</Button>
+                    </Link>
                 </Box>
             </Box>
             <Box sx={{ border: '2px solid #CECECE', margin: '42px', borderRadius: '16px' }}>
@@ -111,9 +115,7 @@ const AllUsersPage = () => {
                                 <TableCell>{user.startdate}</TableCell>
                                 <TableCell>{user.lastactivity}</TableCell>
                                 <TableCell>
-                                    <IconButton aria-label="settings">
-                                        <MoreVertIcon />
-                                    </IconButton>
+                                   <ActionMenu />
                                 </TableCell>
                             </TableRow>
                         ))}

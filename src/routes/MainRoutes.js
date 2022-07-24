@@ -22,6 +22,8 @@ const UtilsUsers = Loadable(lazy(() => import('views/dashboard/Default/new compo
 
 // sample page routing
 // const SamplePage = Loadable(lazy(() => import('views/sample-page')));
+const AddUserView = Loadable(lazy(() => import('views/dashboard/Default/new components/all-users-module/AddUserView')))
+
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -57,6 +59,10 @@ const MainRoutes = {
         {
             path:'/dashboard/users',
             element: <UtilsUsers />
+        },
+        {
+            path:'/dashboard/uses/adduser',
+            element: <AddUserView />
         }
     ]
 };
