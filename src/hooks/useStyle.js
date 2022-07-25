@@ -74,5 +74,13 @@ export const useStyle = makeStyles(() => ({
         '& .css-gcc2o7-MuiButton-startIcon>*:nth-of-type(1)': {
             fontSize: '40px'
         }
+    },
+    inputWidth: {
+        marginTop: '15px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        '& > div': {
+            width: '48%'
+        }
     }
 }));

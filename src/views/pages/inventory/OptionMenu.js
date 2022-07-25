@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import BasicModal from './ModalAssets';
+import ModalDetailAssets from './ModalDetailAssets';
 
 export default function FadeMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -38,10 +39,12 @@ export default function FadeMenu() {
                 TransitionComponent={Fade}
             >
                 <MenuItem>
-                    <BasicModal name={'Detail'} />
+                    <BasicModal name={'edit'} />
                 </MenuItem>
-                <MenuItem onClick={handleClose}>Edit</MenuItem>
-                <MenuItem onClick={handleClose}>Delete</MenuItem>
+                <MenuItem>
+                    <ModalDetailAssets name={'detail'} />
+                </MenuItem>
+                <MenuItem onClick={handleClose}>delete</MenuItem>
             </Menu>
         </div>
     );

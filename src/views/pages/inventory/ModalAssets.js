@@ -3,17 +3,19 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { Input } from 'ui-component/table/useTable';
-import { InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { MenuItem, Select, TextField } from '@mui/material';
+import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import { useStyle } from 'hooks/useStyle';
+import MaterialUIPickers from './DatePicker';
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '80wv',
+    width: '60wv',
     bgcolor: 'background.paper',
-    border: '2px solid #000',
     boxShadow: 24,
     p: 4
 };
@@ -21,25 +23,32 @@ const style = {
 export default function BasicModal({ name }) {
     const [open, setOpen] = React.useState(false);
     const [product, setProduct] = React.useState({});
+    const [selectedDate, handleDateChange] = React.useState(new Date());
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const submitChange = () => setOpen(false);
     const handleChange = (event) => {
         setProduct((current) => ({ ...current, [event.target.label]: event.target.value }));
     };
-
+    const classes = useStyle();
     return (
         <div>
             <Box onClick={handleOpen}>{name}</Box>
-            <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                sx={{ borderRadius: '18px' }}
+            >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h2" component="h2">
                         Insert Product
                     </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    <Typography id="modal-modal-description" sx={{ mt: 2, mb: 2 }}>
                         Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
                     </Typography>
-                    <TextField variant="outlined" sx={{ mt: 2 }} label="product name" />
+                    <TextField variant="outlined" sx={{ mt: 2, width: '100%' }} label="product name" />
                     <Box sx={{ mt: 2 }}>
                         <Select
                             labelId="simple-select-label"
@@ -48,7 +57,7 @@ export default function BasicModal({ name }) {
                             label="type"
                             variant="outlined"
                             onChange={handleChange}
-                            sx={{ mt: 2, width: '100%' }}
+                            sx={{ width: '100%' }}
                         >
                             <MenuItem value={10}>Bought</MenuItem>
                             <MenuItem value={20}>Rented</MenuItem>
@@ -56,16 +65,21 @@ export default function BasicModal({ name }) {
                         </Select>
                     </Box>
 
-                    <Box sx={{ mt: 2 }}>
-                        <Input type="number" id="modal-modal-description" onChange={handleChange} sx={{ width: '48%', mr: '15px' }} />
-                        <Input type="number" id="modal-modal-description" onChange={handleChange} sx={{ width: '48%' }} />
+                    <Box sx={{ mt: 2 }} className={classes.inputWidth}>
+                        <TextField inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} variant="outlined" label="Current Value" />
+                        <TextField inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} variant="outlined" label="Current Value" />
+                        {/* <Input type="number" id="modal-modal-description" onChange={handleChange} label />
+                        <Input type="number" id="modal-modal-description" onChange={handleChange} sx={{ width: '48%' }} /> */}
                     </Box>
-                    <Box sx={{ mt: 2 }}>
-                        <Input type="upload" id="modal-modal-description" onChange={handleChange} />
-                    </Box>
-                    <Box sx={{ mt: 2 }}>
-                        <Input type="number" id="modal-modal-description" onChange={handleChange} />
-                        <Input type="number" id="modal-modal-description" onChange={handleChange} />
+                    {/* <Box sx={{ mt: 2 }}></Box> */}
+                    <Box className={classes.inputWidth}>
+                        <MaterialUIPickers />
+                        <TextField
+                            inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                            variant="outlined"
+                            label="Depreciation"
+                            sx={{ width: '48%' }}
+                        />
                     </Box>
                     <Box sx={{ mt: 4 }}>
                         <Button onClick={handleClose} variant="outlined" sx={{ mr: '15px' }}>

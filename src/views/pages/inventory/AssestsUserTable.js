@@ -34,7 +34,7 @@ const AssetsUserTable = () => {
         }
     });
     useEffect(() => {
-        fetch('http://localhost:4000/assets')
+        fetch('http://localhost:4001/assets')
             .then((res) => res.json())
             .then((data) => setData(data))
             .catch((error) => console.log(error));

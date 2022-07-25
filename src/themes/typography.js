@@ -36,6 +36,11 @@ export default function themeTypography(theme) {
             color: theme.heading,
             fontWeight: 700
         },
+        h1B: {
+            fontSize: '2.125rem',
+            color: theme.colors.darkPrimaryDark,
+            fontWeight: 700
+        },
         subtitle1: {
             fontSize: '0.875rem',
             fontWeight: 500,

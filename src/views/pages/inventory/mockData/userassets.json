@@ -1,0 +1,354 @@
+{
+    "assets": [
+        {
+            "id": 1,
+            "user": "Pansy Schall",
+            "email": "pschall0@sfgate.com",
+            "originalCost": 3561,
+            "currentCost": 1793
+        },
+        {
+            "id": 2,
+            "user": "Demetris Rasp",
+            "email": "drasp1@hao123.com",
+            "originalCost": 4846,
+            "currentCost": 1819
+        },
+        {
+            "id": 3,
+            "user": "Chaddy Hollibone",
+            "email": "chollibone2@miitbeian.gov.cn",
+            "originalCost": 620,
+            "currentCost": 394
+        },
+        {
+            "id": 4,
+            "user": "Martyn Lorenz",
+            "email": "mlorenz3@xing.com",
+            "originalCost": 1787,
+            "currentCost": 999
+        },
+        {
+            "id": 5,
+            "user": "Junia Fincken",
+            "email": "jfincken4@chicagotribune.com",
+            "originalCost": 1300,
+            "currentCost": 1620
+        },
+        {
+            "id": 6,
+            "user": "Anthony Lighten",
+            "email": "alighten5@constantcontact.com",
+            "originalCost": 3779,
+            "currentCost": 2458
+        },
+        {
+            "id": 7,
+            "user": "Angel Donaldson",
+            "email": "adonaldson6@mit.edu",
+            "originalCost": 3819,
+            "currentCost": 1137
+        },
+        {
+            "id": 8,
+            "user": "Mara Lovelady",
+            "email": "mlovelady7@si.edu",
+            "originalCost": 2193,
+            "currentCost": 1178
+        },
+        {
+            "id": 9,
+            "user": "Collie Puddephatt",
+            "email": "cpuddephatt8@mozilla.com",
+            "originalCost": 2217,
+            "currentCost": 3595
+        },
+        {
+            "id": 10,
+            "user": "Tabina Scarisbrick",
+            "email": "tscarisbrick9@ehow.com",
+            "originalCost": 4338,
+            "currentCost": 789
+        },
+        {
+            "id": 11,
+            "user": "Aridatha Rozanski",
+            "email": "arozanskia@sfgate.com",
+            "originalCost": 3083,
+            "currentCost": 4365
+        },
+        {
+            "id": 12,
+            "user": "Nichols Hischke",
+            "email": "nhischkeb@g.co",
+            "originalCost": 163,
+            "currentCost": 1960
+        },
+        {
+            "id": 13,
+            "user": "Em Ximenez",
+            "email": "eximenezc@usatoday.com",
+            "originalCost": 679,
+            "currentCost": 1961
+        },
+        {
+            "id": 14,
+            "user": "Christine Proby",
+            "email": "cprobyd@epa.gov",
+            "originalCost": 1945,
+            "currentCost": 1555
+        },
+        {
+            "id": 15,
+            "user": "Thorstein Vasyagin",
+            "email": "tvasyagine@homestead.com",
+            "originalCost": 4739,
+            "currentCost": 148
+        },
+        {
+            "id": 16,
+            "user": "Lyssa Attawell",
+            "email": "lattawellf@smugmug.com",
+            "originalCost": 140,
+            "currentCost": 362
+        },
+        {
+            "id": 17,
+            "user": "Lori Chaize",
+            "email": "lchaizeg@netscape.com",
+            "originalCost": 817,
+            "currentCost": 1475
+        },
+        {
+            "id": 18,
+            "user": "Eimile Blowers",
+            "email": "eblowersh@vistaprint.com",
+            "originalCost": 1837,
+            "currentCost": 1760
+        },
+        {
+            "id": 19,
+            "user": "Felicle Slatter",
+            "email": "fslatteri@npr.org",
+            "originalCost": 3925,
+            "currentCost": 3763
+        },
+        {
+            "id": 20,
+            "user": "Jillana Druery",
+            "email": "jdrueryj@si.edu",
+            "originalCost": 3763,
+            "currentCost": 4013
+        },
+        {
+            "id": 21,
+            "user": "Shari Masedon",
+            "email": "smasedonk@vimeo.com",
+            "originalCost": 2827,
+            "currentCost": 2671
+        },
+        {
+            "id": 22,
+            "user": "Reba Dowey",
+            "email": "rdoweyl@nps.gov",
+            "originalCost": 1506,
+            "currentCost": 1689
+        },
+        {
+            "id": 23,
+            "user": "Nisse Mac Giany",
+            "email": "nmacm@slideshare.net",
+            "originalCost": 3245,
+            "currentCost": 4187
+        },
+        {
+            "id": 24,
+            "user": "Gabbey Hairsine",
+            "email": "ghairsinen@mayoclinic.com",
+            "originalCost": 4029,
+            "currentCost": 4043
+        },
+        {
+            "id": 25,
+            "user": "Cariotta Melbourne",
+            "email": "cmelbourneo@delicious.com",
+            "originalCost": 4719,
+            "currentCost": 1703
+        },
+        {
+            "id": 26,
+            "user": "Clarance Troth",
+            "email": "ctrothp@wired.com",
+            "originalCost": 2113,
+            "currentCost": 3501
+        },
+        {
+            "id": 27,
+            "user": "Legra Gaisford",
+            "email": "lgaisfordq@icio.us",
+            "originalCost": 2376,
+            "currentCost": 568
+        },
+        {
+            "id": 28,
+            "user": "Jamison Peplaw",
+            "email": "jpeplawr@feedburner.com",
+            "originalCost": 2509,
+            "currentCost": 1971
+        },
+        {
+            "id": 29,
+            "user": "Erl Hammersley",
+            "email": "ehammersleys@booking.com",
+            "originalCost": 2525,
+            "currentCost": 894
+        },
+        {
+            "id": 30,
+            "user": "Doralynn Franzini",
+            "email": "dfranzinit@economist.com",
+            "originalCost": 1351,
+            "currentCost": 332
+        },
+        {
+            "id": 31,
+            "user": "Eda Honsch",
+            "email": "ehonschu@myspace.com",
+            "originalCost": 397,
+            "currentCost": 3051
+        },
+        {
+            "id": 32,
+            "user": "Ermina Ritelli",
+            "email": "eritelliv@wiley.com",
+            "originalCost": 4313,
+            "currentCost": 1528
+        },
+        {
+            "id": 33,
+            "user": "Jefferson Alderman",
+            "email": "jaldermanw@opera.com",
+            "originalCost": 3862,
+            "currentCost": 664
+        },
+        {
+            "id": 34,
+            "user": "Bunny Englefield",
+            "email": "benglefieldx@amazon.com",
+            "originalCost": 1774,
+            "currentCost": 842
+        },
+        {
+            "id": 35,
+            "user": "Farr Fenech",
+            "email": "ffenechy@cdc.gov",
+            "originalCost": 279,
+            "currentCost": 4368
+        },
+        {
+            "id": 36,
+            "user": "Rori Lanfere",
+            "email": "rlanferez@examiner.com",
+            "originalCost": 2702,
+            "currentCost": 2731
+        },
+        {
+            "id": 37,
+            "user": "Taffy Cadore",
+            "email": "tcadore10@devhub.com",
+            "originalCost": 2718,
+            "currentCost": 2094
+        },
+        {
+            "id": 38,
+            "user": "Ettore Della Scala",
+            "email": "edella11@google.fr",
+            "originalCost": 1543,
+            "currentCost": 2253
+        },
+        {
+            "id": 39,
+            "user": "Yovonnda Gillhespy",
+            "email": "ygillhespy12@sitemeter.com",
+            "originalCost": 3552,
+            "currentCost": 3197
+        },
+        {
+            "id": 40,
+            "user": "Riley Mabson",
+            "email": "rmabson13@chron.com",
+            "originalCost": 1377,
+            "currentCost": 150
+        },
+        {
+            "id": 41,
+            "user": "Jayme Foad",
+            "email": "jfoad14@google.cn",
+            "originalCost": 4794,
+            "currentCost": 2570
+        },
+        {
+            "id": 42,
+            "user": "Annabella Sirrell",
+            "email": "asirrell15@vistaprint.com",
+            "originalCost": 1752,
+            "currentCost": 3332
+        },
+        {
+            "id": 43,
+            "user": "Borg Groundwator",
+            "email": "bgroundwator16@princeton.edu",
+            "originalCost": 116,
+            "currentCost": 3105
+        },
+        {
+            "id": 44,
+            "user": "Shara Colson",
+            "email": "scolson17@answers.com",
+            "originalCost": 682,
+            "currentCost": 1259
+        },
+        {
+            "id": 45,
+            "user": "Corey Roselli",
+            "email": "croselli18@sakura.ne.jp",
+            "originalCost": 2820,
+            "currentCost": 3579
+        },
+        {
+            "id": 46,
+            "user": "Juline MacGuiness",
+            "email": "jmacguiness19@webmd.com",
+            "originalCost": 4561,
+            "currentCost": 2825
+        },
+        {
+            "id": 47,
+            "user": "Datha Leydon",
+            "email": "dleydon1a@myspace.com",
+            "originalCost": 4086,
+            "currentCost": 193
+        },
+        {
+            "id": 48,
+            "user": "Bear Forrester",
+            "email": "bforrester1b@amazon.co.uk",
+            "originalCost": 3739,
+            "currentCost": 1202
+        },
+        {
+            "id": 49,
+            "user": "Robin Celand",
+            "email": "rceland1c@independent.co.uk",
+            "originalCost": 4281,
+            "currentCost": 1500
+        },
+        {
+            "id": 50,
+            "user": "Tibold Game",
+            "email": "tgame1d@pinterest.com",
+            "originalCost": 3776,
+            "currentCost": 3309
+        }
+    ]
+}
