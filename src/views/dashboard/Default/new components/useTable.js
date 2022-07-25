@@ -74,7 +74,7 @@ const StyledTable = styled(Table)({
 });
 
 // Table Component
-const useTable = (records, headCells, filterFn) => {
+const useTable = (records, headCells, filterFn,) => {
     const pages = [5, 10, 25];
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(pages[page]);

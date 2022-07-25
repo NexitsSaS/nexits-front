@@ -53,10 +53,16 @@ export default function ActionMenu({ data }) {
                 onClose={handleClose}
             >
                 <MenuItem key="1" onClick={add}>
-                    add
+                    Detail
                 </MenuItem>
                 <MenuItem key="2" onClick={remove}>
-                    remove
+                    Edit
+                </MenuItem>
+                <MenuItem key="2" onClick={remove}>
+                    Delete
+                </MenuItem>
+                <MenuItem key="2" onClick={remove}>
+                    Suspend
                 </MenuItem>
             </Menu>
         </div>
