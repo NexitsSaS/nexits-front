@@ -1,9 +1,8 @@
 import React from 'react';
 import useTable, { SearchInput } from '../useTable';
-import { TableBody, TableCell, TableRow, IconButton, Avatar, Button } from '@mui/material';
+import {List , TableBody, TableCell, TableRow, Avatar, Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AvatarImg from './user.jpg';
 import ActionMenu from './ActionMenu';
 import { Link } from 'react-router-dom';
@@ -99,29 +98,30 @@ const AllUsersPage = () => {
                 </Box>
             </Box>
             <Box sx={{ border: '2px solid #CECECE', margin: '42px', borderRadius: '16px' }}>
-                <TableContainer>
-                    <TblHead />
-                    <TableBody>
-                        {recordsAfterPagingAndSorting().map((user) => (
-                            <TableRow key={user.id}>
-                                <TableCell>
-                                    <Avatar src={AvatarImg} />
-                                </TableCell>
-                                <TableCell>{user.name}</TableCell>
-                                <TableCell>{user.lastname}</TableCell>
-                                <TableCell>{user.email}</TableCell>
-                                <TableCell>{user.team}</TableCell>
-                                <TableCell>{user.office}</TableCell>
-                                <TableCell>{user.startdate}</TableCell>
-                                <TableCell>{user.lastactivity}</TableCell>
-                                <TableCell>
-                                   <ActionMenu />
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </TableContainer>
-                <TblPagination sx={{ backgroundColor: 'red' }} />
+                <List sx={{maxHeight:'400px', overflow:'auto'}}>
+                    <TableContainer>
+                        <TblHead />
+                        <TableBody>
+                            {recordsAfterPagingAndSorting().map((user) => (
+                                <TableRow key={user.id}>
+                                    <TableCell>
+                                        <Avatar src={AvatarImg} />
+                                    </TableCell>
+                                    <TableCell>{user.name}</TableCell>
+                                    <TableCell>{user.lastname}</TableCell>
+                                    <TableCell>{user.email}</TableCell>
+                                    <TableCell>{user.team}</TableCell>
+                                    <TableCell>{user.office}</TableCell>
+                                    <TableCell>{user.startdate}</TableCell>
+                                    <TableCell>{user.lastactivity}</TableCell>
+                                    <TableCell>
+                                       <ActionMenu />
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </TableContainer>
+                </List>
             </Box>
         </div>
     );
