@@ -14,6 +14,7 @@ import Transitions from 'ui-component/extended/Transitions';
 // assets
 import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons';
 import { shouldForwardProp } from '@mui/system';
+import { useStyle } from 'hooks/useStyle';
 
 // styles
 const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
@@ -65,7 +66,10 @@ const MobileSearch = ({ value, setValue, popupState }) => {
         <OutlineInputStyle
             id="input-search-header"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => {
+                setValue(e.target.value);
+                handleValue(e);
+            }}
             placeholder="Search"
             startAdornment={
                 <InputAdornment position="start">
@@ -115,12 +119,13 @@ MobileSearch.propTypes = {
 
 // ==============================|| SEARCH INPUT ||============================== //
 
-const SearchSection = () => {
+const SearchSection = ({ handleValue, filterIn, setFilterIn }) => {
     const theme = useTheme();
     const [value, setValue] = useState('');
+    const classes = useStyle();
 
     return (
-        <>
+        <div className={classes.moveLeft}>
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                 <PopupState variant="popper" popupId="demo-popup-popper">
                     {(popupState) => (
@@ -148,7 +153,14 @@ const SearchSection = () => {
                                                 <Box sx={{ p: 2 }}>
                                                     <Grid container alignItems="center" justifyContent="space-between">
                                                         <Grid item xs>
-                                                            <MobileSearch value={value} setValue={setValue} popupState={popupState} />
+                                                            <MobileSearch
+                                                                value={value}
+                                                                setValue={(e) => {
+                                                                    setValue();
+                                                                    handleValue(e);
+                                                                }}
+                                                                popupState={popupState}
+                                                            />
                                                         </Grid>
                                                     </Grid>
                                                 </Box>
@@ -165,7 +177,10 @@ const SearchSection = () => {
                 <OutlineInputStyle
                     id="input-search-header"
                     value={value}
-                    onChange={(e) => setValue(e.target.value)}
+                    onChange={(e) => {
+                        setValue(e.target.value);
+                        handleValue(e);
+                    }}
                     placeholder="Search"
                     startAdornment={
                         <InputAdornment position="start">
@@ -176,7 +191,7 @@ const SearchSection = () => {
                         <InputAdornment position="end">
                             <ButtonBase sx={{ borderRadius: '12px' }}>
                                 <HeaderAvatarStyle variant="rounded">
-                                    <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
+                                    <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" onClick={() => setFilterIn(!filterIn)} />
                                 </HeaderAvatarStyle>
                             </ButtonBase>
                         </InputAdornment>
@@ -185,7 +200,7 @@ const SearchSection = () => {
                     inputProps={{ 'aria-label': 'weight' }}
                 />
             </Box>
-        </>
+        </div>
     );
 };
 

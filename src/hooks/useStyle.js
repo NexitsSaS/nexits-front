@@ -1,4 +1,3 @@
-import { Circle } from '@mui/icons-material';
 import makeStyles from '@mui/styles/makeStyles';
 
 export const useStyle = makeStyles(() => ({
@@ -82,5 +81,20 @@ export const useStyle = makeStyles(() => ({
         '& > div': {
             width: '48%'
         }
+    },
+    optionMenu: {
+        pointerEvents: ({ type }) => {
+            console.log(type);
+            return type !== 'buy' && 'none';
+        },
+        color: ({ type }) => type !== 'buy' && '#A8ACAF',
+        textAlign: 'center'
+    },
+    addProduct: {
+        marginLeft: '20px',
+        height: '45px'
+    },
+    moveLeft: {
+        marginLeft: 'auto'
     }
 }));

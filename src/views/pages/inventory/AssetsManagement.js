@@ -1,9 +1,12 @@
 import useTable, { Input } from 'ui-component/table/useTable';
-import { TableBody, TableCell, TableRow, Toolbar, MenuItem, CardHeader } from '@mui/material';
+import { TableBody, TableCell, TableRow, Toolbar, MenuItem, CardHeader, Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
 import FadeMenu from './OptionMenu';
-
+import SearchSection from 'layout/MainLayout/Header/SearchSection';
+import { useStyle } from 'hooks/useStyle';
+import ChildModal from './ModalWithChild';
+import ChildModalDetailAssets from './ChildrenModlaDetailAssets';
 const headCells = [
     {
         id: 'productName',
@@ -42,11 +45,13 @@ const typeColors = {
 
 const AssetsManagement = () => {
     const [data, setData] = useState([]);
+    const [showModal, setShowModal] = useState(false);
     const [filterFn, setFilterFn] = useState({
         fn: (items) => {
             return items;
         }
     });
+    const [filterIn, setFilterIn] = useState(false);
     useEffect(() => {
         fetch('http://localhost:4001/globalassets')
             .then((res) => res.json())
@@ -69,16 +74,28 @@ const AssetsManagement = () => {
     const handleSelectChange = (e) => {
         setTeam(e.target.value);
     };
+    const handleModelChange = () => {
+        setShowModal(true);
+        console.log(showModal);
+    };
+    const classes = useStyle();
     return (
         <div>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h1>User Assets Management</h1>
-                <Input sx={{ width: '50%' }} onChange={handleSearch} label="search product" />
+                <h1>Current User Assets</h1>
+                {/* <Input sx={{ width: '50%' }} onChange={handleSearch} label="search product" /> */}
                 {/* <Input onChange={handleSelectChange} select value="all">
                     <MenuItem value="all">All</MenuItem>
                     <MenuItem value="Web Dev Mobile">Web Dev Mobile</MenuItem>
                     <MenuItem value="UX/UI">UX/UI</MenuItem>
                 </Input> */}
+                <SearchSection handleValue={handleSearch} filterIn={filterIn} setFilterIn={setFilterIn} className={classes.moveLeft} />
+                {/* {filterIn && <FiltersTable />} */}
+                <ChildModal name="">
+                    <Button variant="contained" className={classes.addProduct} onClick={handleModelChange}>
+                        Add Assets Manually
+                    </Button>
+                </ChildModal>
             </Toolbar>
             <Box sx={{ border: '2px solid #CECECE', borderRadius: '16px', padding: '5px 25px' }}>
                 <TableContainer>
@@ -98,7 +115,7 @@ const AssetsManagement = () => {
                                                     color: 'blue'
                                                 }}
                                             >
-                                                <FadeMenu />
+                                                <FadeMenu type={order.type} />
                                             </Box>
                                         </TableCell>
                                     ) : (
@@ -108,10 +125,12 @@ const AssetsManagement = () => {
                                             }}
                                         >
                                             {headerCell.id == 'productName' ? (
-                                                <CardHeader
-                                                    avatar={<img src={order.imageThumbnail} alt={headerCell.id} loading="lazy" />}
-                                                    title={order[headerCell.id]}
-                                                />
+                                                <ChildModalDetailAssets>
+                                                    <CardHeader
+                                                        avatar={<img src={order.imageThumbnail} alt={headerCell.id} loading="lazy" />}
+                                                        title={order[headerCell.id]}
+                                                    />
+                                                </ChildModalDetailAssets>
                                             ) : (
                                                 order[headerCell.id]
                                             )}

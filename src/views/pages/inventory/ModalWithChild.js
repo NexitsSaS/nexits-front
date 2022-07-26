@@ -20,7 +20,7 @@ const style = {
     p: 4
 };
 
-export default function BasicModal({ name, children }) {
+export default function ChildModal({ name, children }) {
     const [open, setOpen] = React.useState(false);
     const [product, setProduct] = React.useState({});
     const [selectedDate, handleDateChange] = React.useState(new Date());
@@ -33,7 +33,9 @@ export default function BasicModal({ name, children }) {
     const classes = useStyle();
     return (
         <div>
-            <Box onClick={handleOpen}>{name}</Box>
+            <Box onClick={handleOpen} className={classes.addProduct}>
+                {children}
+            </Box>
             <Modal
                 open={open}
                 onClose={handleClose}

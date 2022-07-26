@@ -48,7 +48,7 @@ const dashboard = {
             id: 'Assets',
             title: 'assets',
             type: 'item',
-            url: '/dashboard/assets',
+            url: '/assets',
             icon: icons.CategoryIcon,
             breadcrumbs: false
         }

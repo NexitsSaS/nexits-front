@@ -1,8 +1,10 @@
 import useTable, { Input } from 'ui-component/table/useTable';
-import { TableBody, TableCell, TableRow, Toolbar, MenuItem } from '@mui/material';
+import { TableBody, TableCell, TableRow, Toolbar, MenuItem, Button, TextField, InputAdornment } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
-import FadeMenu from './OptionMenu';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import { Link } from 'react-router-dom';
+import FindInPageIcon from '@mui/icons-material/FindInPage';
 const headCells = [
     {
         id: 'user',
@@ -59,7 +61,18 @@ const AssetsUserTable = () => {
         <div>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1>User Assets Management</h1>
-                <Input sx={{ width: '50%' }} onChange={handleSearch} label="search user" />
+                <TextField
+                    sx={{ width: '50%' }}
+                    onChange={handleSearch}
+                    label="search user"
+                    InputProps={{
+                        endAdornment: (
+                            <InputAdornment position="end">
+                                <FindInPageIcon />
+                            </InputAdornment>
+                        )
+                    }}
+                />
                 {/* <Input onChange={handleSelectChange} select value="all">
                     <MenuItem value="all">All</MenuItem>
                     <MenuItem value="Web Dev Mobile">Web Dev Mobile</MenuItem>
@@ -84,7 +97,10 @@ const AssetsUserTable = () => {
                                                     color: 'blue'
                                                 }}
                                             >
-                                                <FadeMenu />
+                                                {/* <FadeMenu /> */}
+                                                <Button component={Link} to={`user/${order.id}`} color="primary">
+                                                    <ArrowCircleRightIcon />
+                                                </Button>
                                             </Box>
                                         </TableCell>
                                     ) : (

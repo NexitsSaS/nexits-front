@@ -17,7 +17,8 @@ const TeamStatsUtilsMain = Loadable(lazy(() => import('views/dashboard/Default/n
 const UtilsMainProductDetails = Loadable(lazy(() => import('views/dashboard/Default/new-components/ProductDetails')));
 
 // Min pages routing
-const AssetsByUser = Loadable(lazy(() => import('views/pages/inventory')));
+const AssetsByUser = Loadable(lazy(() => import('views/pages/inventory/AssestsUserTable')));
+const UserAssetsCurrent = Loadable(lazy(() => import('views/pages/inventory/AssetsManagement')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -49,9 +50,12 @@ const MainRoutes = {
             path: '/dashboard/product/:id',
             element: <UtilsMainProductDetails />
         },
-
         {
-            path: '/dashboard/assets',
+            path: '/assets/user/:id',
+            element: <UserAssetsCurrent />
+        },
+        {
+            path: '/assets',
             element: <AssetsByUser />
         }
     ]
