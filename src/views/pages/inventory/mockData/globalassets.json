@@ -1,0 +1,504 @@
+{
+    "globalassets": [
+        {
+            "id": 1,
+            "productName": "lacus purus aliquet at feugiat non pretium",
+            "type": "rent",
+            "orderDate": "11/04/2021",
+            "originalCost": 3121,
+            "currentCost": 2309,
+            "depreciation": 11,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 2,
+            "productName": "a libero nam dui proin leo odio",
+            "type": "buy",
+            "orderDate": "17/09/2021",
+            "originalCost": 135,
+            "currentCost": 1292,
+            "depreciation": 2,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 3,
+            "productName": "mauris enim leo",
+            "type": "rent",
+            "orderDate": "13/09/2021",
+            "originalCost": 2949,
+            "currentCost": 1405,
+            "depreciation": 2,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 4,
+            "productName": "ut erat id mauris vulputate elementum nullam varius",
+            "type": "buy",
+            "orderDate": "09/06/2021",
+            "originalCost": 1971,
+            "currentCost": 137,
+            "depreciation": 6,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 5,
+            "productName": "in hac habitasse platea dictumst maecenas ut",
+            "type": "buy",
+            "orderDate": "31/12/2020",
+            "originalCost": 3142,
+            "currentCost": 1601,
+            "depreciation": 1,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 6,
+            "productName": "massa id nisl venenatis",
+            "type": "buy",
+            "orderDate": "21/04/2022",
+            "originalCost": 1659,
+            "currentCost": 2863,
+            "depreciation": 8,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 7,
+            "productName": "ante vestibulum ante ipsum primis in",
+            "type": "leasing",
+            "orderDate": "09/09/2021",
+            "originalCost": 1256,
+            "currentCost": 771,
+            "depreciation": 9,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 8,
+            "productName": "risus praesent lectus vestibulum quam sapien varius ut",
+            "type": "leasing",
+            "orderDate": "25/09/2020",
+            "originalCost": 3769,
+            "currentCost": 3578,
+            "depreciation": 6,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 9,
+            "productName": "id ligula suspendisse",
+            "type": "buy",
+            "orderDate": "28/09/2020",
+            "originalCost": 845,
+            "currentCost": 4358,
+            "depreciation": 8,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 10,
+            "productName": "lobortis sapien sapien non mi integer ac",
+            "type": "leasing",
+            "orderDate": "15/01/2021",
+            "originalCost": 546,
+            "currentCost": 2331,
+            "depreciation": 5,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 11,
+            "productName": "lacus morbi sem",
+            "type": "rent",
+            "orderDate": "12/02/2021",
+            "originalCost": 2783,
+            "currentCost": 3157,
+            "depreciation": 1,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 12,
+            "productName": "in est risus auctor sed tristique",
+            "type": "rent",
+            "orderDate": "06/06/2022",
+            "originalCost": 3673,
+            "currentCost": 2180,
+            "depreciation": 1,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 13,
+            "productName": "nunc donec quis orci eget orci vehicula condimentum",
+            "type": "rent",
+            "orderDate": "10/04/2021",
+            "originalCost": 1683,
+            "currentCost": 2426,
+            "depreciation": 9,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 14,
+            "productName": "purus aliquet at",
+            "type": "buy",
+            "orderDate": "17/01/2021",
+            "originalCost": 527,
+            "currentCost": 3561,
+            "depreciation": 1,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 15,
+            "productName": "ut erat curabitur",
+            "type": "leasing",
+            "orderDate": "02/04/2021",
+            "originalCost": 1727,
+            "currentCost": 3273,
+            "depreciation": 12,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 16,
+            "productName": "elementum nullam varius nulla",
+            "type": "leasing",
+            "orderDate": "25/04/2021",
+            "originalCost": 1744,
+            "currentCost": 403,
+            "depreciation": 7,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 17,
+            "productName": "nunc commodo placerat praesent blandit nam nulla",
+            "type": "rent",
+            "orderDate": "04/08/2020",
+            "originalCost": 3989,
+            "currentCost": 959,
+            "depreciation": 11,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 18,
+            "productName": "quis lectus suspendisse potenti",
+            "type": "rent",
+            "orderDate": "12/05/2021",
+            "originalCost": 3162,
+            "currentCost": 2688,
+            "depreciation": 5,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 19,
+            "productName": "odio donec vitae",
+            "type": "buy",
+            "orderDate": "06/06/2021",
+            "originalCost": 2489,
+            "currentCost": 2393,
+            "depreciation": 9,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 20,
+            "productName": "accumsan felis ut at dolor quis odio",
+            "type": "leasing",
+            "orderDate": "06/10/2021",
+            "originalCost": 4074,
+            "currentCost": 2719,
+            "depreciation": 6,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 21,
+            "productName": "id turpis integer aliquet",
+            "type": "buy",
+            "orderDate": "14/08/2020",
+            "originalCost": 2085,
+            "currentCost": 2444,
+            "depreciation": 3,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 22,
+            "productName": "id nisl venenatis lacinia aenean sit amet justo",
+            "type": "rent",
+            "orderDate": "18/10/2020",
+            "originalCost": 2395,
+            "currentCost": 3414,
+            "depreciation": 1,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 23,
+            "productName": "quisque porta volutpat erat",
+            "type": "buy",
+            "orderDate": "24/10/2021",
+            "originalCost": 659,
+            "currentCost": 1601,
+            "depreciation": 12,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 24,
+            "productName": "primis in faucibus",
+            "type": "buy",
+            "orderDate": "08/04/2021",
+            "originalCost": 3758,
+            "currentCost": 1347,
+            "depreciation": 9,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 25,
+            "productName": "quis augue luctus tincidunt nulla mollis",
+            "type": "rent",
+            "orderDate": "16/06/2021",
+            "originalCost": 4276,
+            "currentCost": 94,
+            "depreciation": 6,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 26,
+            "productName": "turpis a pede posuere nonummy integer non velit",
+            "type": "leasing",
+            "orderDate": "08/04/2022",
+            "originalCost": 1848,
+            "currentCost": 3068,
+            "depreciation": 4,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 27,
+            "productName": "eros suspendisse accumsan tortor quis turpis sed ante",
+            "type": "buy",
+            "orderDate": "17/08/2020",
+            "originalCost": 2022,
+            "currentCost": 1527,
+            "depreciation": 4,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 28,
+            "productName": "velit id pretium iaculis diam erat fermentum",
+            "type": "leasing",
+            "orderDate": "11/06/2021",
+            "originalCost": 3542,
+            "currentCost": 3358,
+            "depreciation": 4,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 29,
+            "productName": "vestibulum sed magna at nunc commodo",
+            "type": "leasing",
+            "orderDate": "10/11/2020",
+            "originalCost": 1649,
+            "currentCost": 2581,
+            "depreciation": 7,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 30,
+            "productName": "aliquam non mauris morbi non lectus aliquam",
+            "type": "leasing",
+            "orderDate": "26/04/2021",
+            "originalCost": 1591,
+            "currentCost": 4429,
+            "depreciation": 1,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 31,
+            "productName": "pellentesque viverra pede ac",
+            "type": "rent",
+            "orderDate": "10/11/2020",
+            "originalCost": 2814,
+            "currentCost": 302,
+            "depreciation": 7,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 32,
+            "productName": "venenatis turpis enim blandit mi in porttitor",
+            "type": "rent",
+            "orderDate": "29/03/2022",
+            "originalCost": 3758,
+            "currentCost": 3962,
+            "depreciation": 6,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 33,
+            "productName": "amet turpis elementum",
+            "type": "leasing",
+            "orderDate": "26/08/2021",
+            "originalCost": 1640,
+            "currentCost": 675,
+            "depreciation": 3,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 34,
+            "productName": "magna vulputate luctus cum",
+            "type": "rent",
+            "orderDate": "15/07/2022",
+            "originalCost": 2038,
+            "currentCost": 2665,
+            "depreciation": 2,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 35,
+            "productName": "lacinia nisi venenatis",
+            "type": "leasing",
+            "orderDate": "07/12/2020",
+            "originalCost": 2577,
+            "currentCost": 1343,
+            "depreciation": 2,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 36,
+            "productName": "aliquet pulvinar sed nisl nunc rhoncus dui",
+            "type": "leasing",
+            "orderDate": "12/11/2021",
+            "originalCost": 625,
+            "currentCost": 3584,
+            "depreciation": 5,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 37,
+            "productName": "velit donec diam neque vestibulum",
+            "type": "buy",
+            "orderDate": "30/10/2020",
+            "originalCost": 2581,
+            "currentCost": 3157,
+            "depreciation": 9,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 38,
+            "productName": "luctus et ultrices",
+            "type": "leasing",
+            "orderDate": "19/11/2021",
+            "originalCost": 669,
+            "currentCost": 1832,
+            "depreciation": 10,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 39,
+            "productName": "ac leo pellentesque ultrices mattis odio donec vitae",
+            "type": "buy",
+            "orderDate": "03/01/2022",
+            "originalCost": 1161,
+            "currentCost": 4127,
+            "depreciation": 11,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 40,
+            "productName": "velit id pretium iaculis diam",
+            "type": "leasing",
+            "orderDate": "25/11/2021",
+            "originalCost": 2844,
+            "currentCost": 1974,
+            "depreciation": 5,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 41,
+            "productName": "luctus nec molestie sed justo pellentesque viverra pede",
+            "type": "buy",
+            "orderDate": "28/02/2021",
+            "originalCost": 1829,
+            "currentCost": 2224,
+            "depreciation": 12,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 42,
+            "productName": "elementum in hac habitasse platea",
+            "type": "rent",
+            "orderDate": "20/04/2021",
+            "originalCost": 940,
+            "currentCost": 1253,
+            "depreciation": 11,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 43,
+            "productName": "lobortis sapien sapien",
+            "type": "rent",
+            "orderDate": "29/01/2022",
+            "originalCost": 149,
+            "currentCost": 679,
+            "depreciation": 5,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 44,
+            "productName": "maecenas ut massa quis augue luctus tincidunt",
+            "type": "leasing",
+            "orderDate": "13/04/2022",
+            "originalCost": 981,
+            "currentCost": 282,
+            "depreciation": 12,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 45,
+            "productName": "quam fringilla rhoncus mauris enim leo",
+            "type": "rent",
+            "orderDate": "30/09/2021",
+            "originalCost": 2476,
+            "currentCost": 3137,
+            "depreciation": 7,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/dddddd/000000"
+        },
+        {
+            "id": 46,
+            "productName": "quis orci nullam molestie nibh",
+            "type": "buy",
+            "orderDate": "09/07/2021",
+            "originalCost": 3093,
+            "currentCost": 4284,
+            "depreciation": 11,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/cc0000/ffffff"
+        },
+        {
+            "id": 47,
+            "productName": "volutpat dui maecenas tristique est et",
+            "type": "rent",
+            "orderDate": "04/04/2022",
+            "originalCost": 1917,
+            "currentCost": 1357,
+            "depreciation": 7,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 48,
+            "productName": "a suscipit nulla elit ac nulla sed",
+            "type": "leasing",
+            "orderDate": "17/12/2021",
+            "originalCost": 3745,
+            "currentCost": 3585,
+            "depreciation": 12,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/5fa2dd/ffffff"
+        },
+        {
+            "id": 49,
+            "productName": "pede justo eu massa donec dapibus duis at",
+            "type": "leasing",
+            "orderDate": "27/08/2020",
+            "originalCost": 3681,
+            "currentCost": 4108,
+            "depreciation": 3,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        },
+        {
+            "id": 50,
+            "productName": "eleifend quam a odio in hac habitasse",
+            "type": "rent",
+            "orderDate": "25/10/2020",
+            "originalCost": 1653,
+            "currentCost": 4135,
+            "depreciation": 10,
+            "imageThumbnail": "http://dummyimage.com/45x45.png/ff4444/ffffff"
+        }
+    ]
+}

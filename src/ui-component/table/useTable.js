@@ -1,7 +1,5 @@
-import { styled, TableCell, TextField, TableHead, TablePagination, TableRow, TableSortLabel, OutlinedInput, InputAdornment, ButtonBase } from '@mui/material';
+import { styled, TableCell, TextField, TableHead, TablePagination, TableRow, TableSortLabel } from '@mui/material';
 import Table from '@mui/material/Table';
-import { Box } from '@mui/system';
-import { IconAdjustmentsHorizontal, IconSearch } from '@tabler/icons';
 import { useState } from 'react';
 
 export function Input(props) {
@@ -19,62 +17,35 @@ export function Input(props) {
     );
 }
 
-const OutlineInputStyle = styled(OutlinedInput)({
-    width: 434,
-    paddingLeft: 16,
-    paddingRight: 16,
-    '& input': {
-        background: 'transparent !important',
-        paddingLeft: '4px !important' // Great Library btw :'D
-    }
-});
-
-export const SearchInput = (props) => {
-    const { name, label, value, error = null, onChange, ...other } = props;
-    return (
-        <Box>
-            <OutlineInputStyle
-                label={label}
-                name={name}
-                value={value}
-                onChange={onChange}
-                {...other}
-                {...(error && { error: true, helperText: error })}
-                id="input-search-header"
-                startAdornment={<InputAdornment position='start'>
-                    <IconSearch stroke={1.5} size='1rem' color='grey' />
-                </InputAdornment>}
-                endAdornment={
-                    <InputAdornment position='end'>
-                        <ButtonBase sx={{color: 'blue',padding:'0.3rem', borderRadius:'6px' , background: '#eff1ff'}}>
-                        <IconAdjustmentsHorizontal   stroke={1.5} size='1.3rem' />
-
-                        </ButtonBase>
-                    </InputAdornment>
-                }
-            />
-        </Box>
-    );
-};
-
 // Table Styling
 const StyledTable = styled(Table)({
-    marginTop: '3',
+    padding: '25px',
+    '& thead': {
+        backgroundColor: '#e3e1e2'
+    },
     '& thead th': {
-        fontWeigth: '600',
-        color: 'darkslategray'
+        fontWeight: '600',
+        color: '#474747',
+        border: 'none'
     },
     '& tbody td': {
-        fontWeigth: '300'
+        fontWeight: '300',
+        border: 'none'
     },
     '& tbody tr:hover': {
         backgroundColor: '#fff',
         cursor: 'pointer'
+    },
+    '& th:nth-child(1)': {
+        borderRadius: '10px 0px 0px 10px'
+    },
+    '& th:nth-last-child(1)': {
+        borderRadius: '0px 10px 10px 0px'
     }
 });
 
 // Table Component
-const useTable = (records, headCells, filterFn,) => {
+const useTable = (records, headCells, filterFn) => {
     const pages = [5, 10, 25];
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(pages[page]);
@@ -117,7 +88,6 @@ const useTable = (records, headCells, filterFn,) => {
     };
     const TblPagination = () => (
         <TablePagination
-            next
             page={page}
             component="div"
             rowsPerPageOptions={pages}
