@@ -11,7 +11,8 @@ import {
     Checkbox,
     FormControlLabel,
     Typography,
-    Box
+    Box,
+    Tooltip
 } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
@@ -70,7 +71,7 @@ const AddUserView = () => {
     };
 
     return (
-        <div style={{color:'black'}}>
+        <div style={{ color: 'black' }}>
             <h2>Quick add or Advanced add</h2>
             <h1>Add new user</h1>
             <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
@@ -102,9 +103,7 @@ const AddUserView = () => {
                                 icon={<RadioButtonUncheckedIcon />}
                                 checkedIcon={<CheckCircleOutlineIcon />}
                                 sx={{
-                                    '& .MuiSvgIcon-root': {
-                                        fontSize: 40
-                                    }
+                                    padding: 0
                                 }}
                             />
                         }
@@ -116,12 +115,14 @@ const AddUserView = () => {
                     <TextField placeholder="Enter Start Date" type="date" />
                 </FormGroup>
                 <Typography></Typography>
-                <Typography
-                    onClick={handleAddDetails}
-                    sx={{ color: 'blue', textDecoration: 'underline', justifySelf: 'end', fontSize: '1rem', cursor: 'pointer' }}
-                >
-                    Add more details?
-                </Typography>
+                <Tooltip title='add more details about name and adress'>
+                    <Typography
+                        onClick={handleAddDetails}
+                        sx={{ color: 'blue', textDecoration: 'underline', justifySelf: 'end', fontSize: '1rem', cursor: 'pointer' }}
+                    >
+                        Add more details ?
+                    </Typography>
+                </Tooltip>
                 {details && (
                     <>
                         <CTextInput label="Adress" value={adress} id="adress" />
@@ -144,34 +145,36 @@ const AddUserView = () => {
             >
                 Invite
             </Button>
-            <Box sx={{marginTop:'28px' ,padding: '2rem', border: '2px solid #F5F5F5', width: '53%', borderRadius: '8px' }}>
+            <Box sx={{ marginTop: '28px', padding: '2rem', border: '2px solid #F5F5F5', width: '53%', borderRadius: '8px' }}>
                 <div
                     style={{
                         display: 'flex',
                         alignItems: 'center',
                         flexWrap: 'wrap',
-                        fontSize:'1.3rem',
-                        color:'black',
-                        
+                        fontSize: '1.3rem',
+                        color: 'black'
                     }}
                 >
                     <UploadFileIcon />
-                    <span style={{marginLeft:'.5rem'}}>import file</span>
+                    <span style={{ marginLeft: '.5rem' }}>import file</span>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam officia fuga esse natus? Incidunt expedita aut quae iusto, nemo voluptatem!</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam officia fuga esse natus? Incidunt expedita aut quae
+                    iusto, nemo voluptatem!
+                </p>
                 <Button
-                sx={{
-                    marginTop: '10px',
-                    backgroundColor: '#0800ff',
-                    fontSize: '16px',
-                    padding: '8px 30px 8px 30px',
-                    height: '46px',
-                    borderRadius: '8px'
-                }}
-                variant="contained"
-            >
-                Import
-            </Button>
+                    sx={{
+                        marginTop: '10px',
+                        backgroundColor: '#0800ff',
+                        fontSize: '16px',
+                        padding: '8px 30px 8px 30px',
+                        height: '46px',
+                        borderRadius: '8px'
+                    }}
+                    variant="contained"
+                >
+                    Import
+                </Button>
             </Box>
         </div>
     );
