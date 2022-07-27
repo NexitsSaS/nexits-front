@@ -115,7 +115,7 @@ const AddUserView = () => {
                     <TextField placeholder="Enter Start Date" type="date" />
                 </FormGroup>
                 <Typography></Typography>
-                <Tooltip title='add more details about name and adress'>
+                <Tooltip title='add more details about the user (i.e: name, lastname, adress)'>
                     <Typography
                         onClick={handleAddDetails}
                         sx={{ color: 'blue', textDecoration: 'underline', justifySelf: 'end', fontSize: '1rem', cursor: 'pointer' }}
