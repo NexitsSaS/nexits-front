@@ -6,7 +6,7 @@ import Loadable from 'ui-component/Loadable';
 import Lazy from 'yup/lib/Lazy';
 
 // Dashboard routing
-const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/mainstats')));
+const UtilsMainStats = Loadable(lazy(() => import('views/dashboard/Default/new-components/MainStats')));
 
 // Extra routing
 
