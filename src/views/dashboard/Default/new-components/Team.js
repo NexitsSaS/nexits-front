@@ -44,7 +44,7 @@ const Team = () => {
             .catch((error) => console.log(error));
     }, []);
 
-    const { TableContainer, TblHead, TblPagination, recordsAfterPagingAndSorting } =  useTable(data, headCells, filterFn);
+    const { TableContainer, TblHead, TblPagination, recordsAfterPagingAndSorting } = useTable(data, headCells, filterFn);
 
     const handleSearch = (e) => {
         let target = e.target;
@@ -74,14 +74,13 @@ const Team = () => {
 
     return (
         <div>
-            <Box sx={{display: 'flex', flexWrap: 'wrap'}}>
-            <TeamCategoryCard />
-            <TeamCategoryCard />
-            <TeamCategoryCard />
-            <TeamCategoryCard />
-            <TeamCategoryCard />
-            <TeamCategoryCard />
-
+            <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                <TeamCategoryCard />
+                <TeamCategoryCard />
+                <TeamCategoryCard />
+                <TeamCategoryCard />
+                <TeamCategoryCard />
+                <TeamCategoryCard />
             </Box>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1>{team} Team</h1>

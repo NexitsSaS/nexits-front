@@ -19,17 +19,28 @@ export function Input(props) {
 
 // Table Styling
 const StyledTable = styled(Table)({
-    marginTop: '3',
+    padding: '25px',
+    '& thead': {
+        backgroundColor: '#e3e1e2'
+    },
     '& thead th': {
-        fontWeigth: '600',
-        color: 'darkslategray'
+        fontWeight: '600',
+        color: '#474747',
+        border: 'none'
     },
     '& tbody td': {
-        fontWeigth: '300'
+        fontWeight: '300',
+        border: 'none'
     },
     '& tbody tr:hover': {
         backgroundColor: '#fff',
         cursor: 'pointer'
+    },
+    '& th:nth-child(1)': {
+        borderRadius: '10px 0px 0px 10px'
+    },
+    '& th:nth-last-child(1)': {
+        borderRadius: '0px 10px 10px 0px'
     }
 });
 

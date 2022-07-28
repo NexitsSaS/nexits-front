@@ -1,0 +1,79 @@
+
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Djamal",
+            "lastname": "Felalh",
+            "email": "user@user.com",
+            "team": "Marketing",
+            "office": "Berlin",
+            "startdate": "12/02/2021",
+            "lastactivity":"Lorem"
+        },       {
+            "id": 2,
+            "lastname": "Nuit",
+            "name": "Marie",
+            "email": "marie@user.com",
+            "team": "UI/ UX",
+            "office": "France",
+            "startdate": "13/06/2022",
+            "lastactivity":"Lorem"
+        },{
+            "id": 3,
+            "lastname": "Undertaker",
+            "name": "Uh-Now",
+            "email": "uner@user.com",
+            "team": "Web dev",
+            "office": "Portugal",
+            "startdate": "19/02/2022",
+            "lastactivity":"Lorem"
+        },{
+            "id": 4,
+            "lastname": "Felalh",
+            "name": "Mohamed",
+            "email": "user@user.com",
+            "team": "UI/ UX",
+            "office": "Berlin",
+            "startdate": "12/06/2022",
+            "lastactivity":"Lorem"
+        },{
+            "id": 5,
+            "lastname": "Felalh",
+            "name": "Mohamed",
+            "email": "user@user.com",
+            "team": "UI/ UX",
+            "office": "Berlin",
+            "startdate": "12/06/2022",
+            "lastactivity":"Lorem"
+        },{
+            "id": 6,
+            "lastname": "Felalh",
+            "name": "Mohamed",
+            "email": "user@user.com",
+            "team": "UI/ UX",
+            "office": "Berlin",
+            "startdate": "12/06/2022",
+            "lastactivity":"Lorem"
+        },{
+            "id": 7,
+            "lastname": "Felalh",
+            "name": "Mohamed",
+            "email": "user@user.com",
+            "team": "UI/ UX",
+            "office": "Berlin",
+            "startdate": "12/06/2022",
+            "lastactivity":"Lorem"
+        },{
+            "id": 8,
+            "lastname": "Felalh",
+            "name": "Mohamed",
+            "email": "user@user.com",
+            "team": "UI/ UX",
+            "office": "Berlin",
+            "startdate": "12/06/2022",
+            "lastactivity":"Lorem"
+        }
+       
+    ]
+}

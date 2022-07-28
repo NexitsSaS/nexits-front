@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-        backgroundColor: "#cfcfcf",
+        backgroundColor: '#cfcfcf',
         color: theme.palette.common.white
     },
     [`&.${tableCellClasses.body}`]: {
@@ -37,7 +37,6 @@ function createData(user, email, office, product, packs, admin, date) {
     return { user, email, office, product, packs, admin, date };
 }
 
-
 const rows = [
     createData('a user', 'test@mail.test', 'france', 5, 1, 'santori', '25/07/2022'),
     createData('a user', 'test@mail.test', 'france', 5, 1, 'santori', '25/07/2022'),
@@ -46,13 +45,22 @@ const rows = [
     createData('a user', 'test@mail.test', 'france', 5, 1, 'santori', '25/07/2022')
 ];
 
-export default function Historypack() {
-    const history=useNavigate()
+export default function Historypack({ table = rows }) {
+    const history = useNavigate();
+    const headerTable = Object.keys(table[0]);
     return (
         <>
+            <Grid container direction="row" sx={{ p: 3, ml: 2, mb: 2 }}>
+                <Typography variant="h1">{'History'}</Typography>
+            </Grid>
             <Grid container direction="row" sx={{ p: 5, justifyContent: 'space-around', alignItems: 'center' }}>
                 <Grid sx={{ p: 2 }}>
-                    <ArrowCircleLeftIcon onClick={()=>{history('/dashboard/mainstats')}} sx={{ color: 'blue', fontSize: 40, mb: 1 ,cursor:"pointer"}} />
+                    <ArrowCircleLeftIcon
+                        onClick={() => {
+                            history('/dashboard/mainstats');
+                        }}
+                        sx={{ color: 'blue', fontSize: 40, mb: 1, cursor: 'pointer' }}
+                    />
                     <Typography sx={{ fontSize: '1rem' }}>historique pack design</Typography>
                     <Typography sx={{ color: 'blue', mt: 1 }}>500 order</Typography>
                 </Grid>
@@ -69,25 +77,17 @@ export default function Historypack() {
                 <Table sx={{ minWidth: 700 }} aria-label="customized table">
                     <TableHead>
                         <TableRow>
-                            <StyledTableCell align="center">user</StyledTableCell>
-                            <StyledTableCell align="center">email</StyledTableCell>
-                            <StyledTableCell align="center">office</StyledTableCell>
-                            <StyledTableCell align="center">product</StyledTableCell>
-                            <StyledTableCell align="center">pack</StyledTableCell>
-                            <StyledTableCell align="center">admin</StyledTableCell>
-                            <StyledTableCell align="center">date</StyledTableCell>
+                            {headerTable.map((head) => (
+                                <StyledTableCell align="center">{head}</StyledTableCell>
+                            ))}
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
+                        {rows.map((row, i) => (
                             <StyledTableRow key={row.name}>
-                                <StyledTableCell align="center">{row.user}</StyledTableCell>
-                                <StyledTableCell align="center">{row.email}</StyledTableCell>
-                                <StyledTableCell align="center">{row.office}</StyledTableCell>
-                                <StyledTableCell align="center">{row.product}</StyledTableCell>
-                                <StyledTableCell align="center">{row.packs}</StyledTableCell>
-                                <StyledTableCell align="center">{row.admin}</StyledTableCell>
-                                <StyledTableCell align="center">{row.date}</StyledTableCell>
+                                {headerTable.map((head) => (
+                                    <StyledTableCell align="center">{row[head]}</StyledTableCell>
+                                ))}
                             </StyledTableRow>
                         ))}
                     </TableBody>

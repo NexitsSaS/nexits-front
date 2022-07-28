@@ -12,7 +12,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 
-export default function Newboxcharts({ title }) {
+const Newboxcharts = function ({ title }) {
     const [open, setOpen] = React.useState(false);
     const [schartmonth, setschartmonth] = React.useState('january');
     const handleClick = () => {
@@ -73,7 +73,7 @@ export default function Newboxcharts({ title }) {
                                         onClick={() => {
                                             setOpen(false);
                                             setschartmonth(month);
-                                            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                                            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                                         }}
                                         key={i}
                                         component="div"
@@ -92,4 +92,6 @@ export default function Newboxcharts({ title }) {
             </Box>
         </>
     );
-}
+};
+
+export default Newboxcharts;
