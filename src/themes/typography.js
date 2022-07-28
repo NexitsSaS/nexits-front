@@ -4,7 +4,6 @@
  */
 
 export default function themeTypography(theme) {
-    console.log(theme.colors.darkPrimaryDark);
     return {
         fontFamily: theme?.customization?.fontFamily,
         h6: {
@@ -35,6 +34,11 @@ export default function themeTypography(theme) {
         h1: {
             fontSize: '2.125rem',
             color: theme.heading,
+            fontWeight: 700
+        },
+        h1B: {
+            fontSize: '2.125rem',
+            color: theme.colors.darkPrimaryDark,
             fontWeight: 700
         },
         subtitle1: {

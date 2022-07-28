@@ -1,8 +1,9 @@
 // assets
-import { IconDashboard } from '@tabler/icons';
-
+import { IconDashboard, IconClipboardCheck, IconClipboardList, IconUsers } from '@tabler/icons';
+import GroupsIcon from '@mui/icons-material/Groups';
+import CategoryIcon from '@mui/icons-material/Category';
 // constant
-const icons = { IconDashboard };
+const icons = { IconDashboard, IconClipboardCheck, IconClipboardList, GroupsIcon, CategoryIcon, IconUsers };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -15,32 +16,48 @@ const dashboard = {
             id: 'mainstats',
             title: 'Stats',
             type: 'item',
-            url: '/dashboard/mainstats',
+            url: '/dashboard/stats',
             icon: icons.IconDashboard,
             breadcrumbs: false
         },
         {
             id: 'catalog',
-            title: 'catalogue general',
+            title: 'General Catalog',
             type: 'item',
-            url: '/dashboard/catalog',
-            icon: icons.IconDashboard,
+            url: '/catalog',
+            icon: icons.IconClipboardList,
             breadcrumbs: false
         },
         {
             id: 'packhist',
-            title: 'pack history',
+            title: 'Pack History',
             type: 'item',
-            url: '/dashboard/packhistory',
-            icon: icons.IconDashboard,
+            url: '/packhistory',
+            icon: icons.IconClipboardCheck,
             breadcrumbs: false
         },
         {
-            id: 'teams',
-            title: 'teams',
+            id: 'teamDashboard',
+            title: 'Teams',
             type: 'item',
-            url: '/dashboard/teams',
-            icon: icons.IconDashboard,
+            url: '/teams',
+            icon: icons.GroupsIcon,
+            breadcrumbs: false
+        },
+        {
+            id: 'Assets',
+            title: 'assets',
+            type: 'item',
+            url: '/assets',
+            icon: icons.CategoryIcon,
+            breadcrumbs: false
+        },
+         {
+            id: 'users',
+            title: 'users',
+            type: 'item',
+            url: '/dashboard/users',
+            icon: icons.IconUsers,
             breadcrumbs: false
         }
     ]
